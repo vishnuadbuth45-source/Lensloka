@@ -196,11 +196,19 @@ export default function LocationsPage() {
 
               {/* India map */}
               <div className="relative mx-auto aspect-[3/4] w-full max-w-[700px]">
-                <img
-                  src="/india.svg"
-                  alt="Map of India"
-                  className="absolute inset-0 h-full w-full object-contain opacity-90"
-                />
+                <div
+  className="absolute inset-0 bg-[#9d5fa3]/70"
+  style={{
+    WebkitMaskImage: "url('/india.svg')",
+    maskImage: "url('/india.svg')",
+    WebkitMaskRepeat: "no-repeat",
+    maskRepeat: "no-repeat",
+    WebkitMaskPosition: "center",
+    maskPosition: "center",
+    WebkitMaskSize: "contain",
+    maskSize: "contain",
+  }}
+/>
 
                 {/* City pins */}
                 {locations.map((location) => {
