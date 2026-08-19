@@ -1,20 +1,8 @@
-import { Suspense } from 'react'
-import { CreatorsContent } from './creators-content'
+import { CreatorsContent } from "./creators-content"
+import { getCreators } from "@/lib/queries/creators"
 
-function CreatorsPageLoading() {
-  return (
-    <main className="relative bg-background text-foreground py-24">
-      <div className="mx-auto max-w-7xl px-6 text-center">
-        <p className="text-muted-foreground">Loading creators...</p>
-      </div>
-    </main>
-  )
-}
+export default async function CreatorsPage() {
+  const creators = await getCreators()
 
-export default function CreatorsPage() {
-  return (
-    <Suspense fallback={<CreatorsPageLoading />}>
-      <CreatorsContent />
-    </Suspense>
-  )
+  return <CreatorsContent creators={creators} />
 }

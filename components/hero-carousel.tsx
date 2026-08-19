@@ -141,7 +141,7 @@ export function HeroCarousel() {
 
           {/* Inline CTA (mobile) */}
           <a
-            href="#services"
+            href="/services"
             className="mt-6 inline-flex rounded-full bg-foreground/90 px-8 py-3.5 text-sm font-semibold text-background shadow-lg backdrop-blur transition-colors hover:bg-foreground lg:hidden"
           >
             Explore Services
@@ -152,7 +152,7 @@ export function HeroCarousel() {
       {/* Centered CTA (desktop) */}
       <div className="absolute inset-x-0 bottom-20 z-20 hidden justify-center lg:flex">
         <a
-          href="#services"
+          href="/services"
           className="rounded-full bg-foreground/90 px-8 py-3.5 text-sm font-semibold text-background shadow-lg backdrop-blur transition-colors hover:bg-foreground"
         >
           Explore Services
